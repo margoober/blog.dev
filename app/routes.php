@@ -15,3 +15,27 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+Route::get('/sayhello/{name?}', function($name = 'pal') {
+	$data = [
+		'name' => $name
+	];
+	return View::make('my-first-view')->with($data);
+});
+
+Route::get('/resume',function () {
+	return "This is my resume";
+});
+
+Route::get('/portfolio',function () {
+	return "This is my portfolio";
+});
+
+Route::get('/rolldice/{guess}', function($guess) {
+	$randnumb= rand(1, 6);
+	$data = [
+		'randnumb' => $randnumb,
+		'guess' => $guess
+	];
+	return View::make('rolldice')->with($data);
+});
