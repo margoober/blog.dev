@@ -11,10 +11,12 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+// Route::get('/', function()
+// {
+// 	return View::make('hello');
+// }); replaced by:
+
+Route::get('/', 'HomeController@showWelcome');
 
 Route::get('/sayhello/{name?}', function($name = 'pal') {
 	$data = [
@@ -23,19 +25,10 @@ Route::get('/sayhello/{name?}', function($name = 'pal') {
 	return View::make('my-first-view')->with($data);
 });
 
-Route::get('/resume',function () {
-	return "This is my resume";
-});
+Route::get('/resume', 'HomeController@showResume');
 
-Route::get('/portfolio',function () {
-	return "This is my portfolio";
-});
+Route::get('/portfolio', 'HomeController@showPortfolio');
 
-Route::get('/rolldice/{guess}', function($guess) {
-	$randnumb= rand(1, 6);
-	$data = [
-		'randnumb' => $randnumb,
-		'guess' => $guess
-	];
-	return View::make('rolldice')->with($data);
-});
+Route::get('/rolldice/{guess}', 'HomeController@rolldice');
+
+Route::get('/random-guess', 'HomeController@randomGuess');
