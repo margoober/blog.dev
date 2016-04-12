@@ -32,3 +32,22 @@ Route::get('/portfolio', 'HomeController@showPortfolio');
 Route::get('/rolldice/{guess}', 'HomeController@rolldice');
 
 Route::get('/random-guess', 'HomeController@randomGuess');
+
+Route::get('/horndorn', 'HomeController@showTheDorn');
+
+Route::get('/simplesnailman', 'HomeController@showSimpleSnailman');
+
+//REST routes!:
+
+Route::get('/posts', 'PostsController@index');
+Route::get('/posts/create', 'PostsController@create');
+Route::post('/posts', 'PostsController@store');
+Route::get('/posts/{post}', 'PostsController@show');
+Route::get('/posts/{post}/edit', 'PostsController@edit');
+Route::put('/posts/{post}', 'PostsController@update');
+Route::delete('/posts/{post}', 'PostsController@destroy');
+/*
+ALL THESE ARE RENDERED BY:
+
+Route::resource('posts', 'PostsController');
+*/

@@ -1,0 +1,78 @@
+#tableBorder {
+	border: 0px solid midnightblue;
+	text-align: center;
+}
+#tableSnails {
+	border: 0px solid goldenrod;
+}
+#title {
+	font-family: helvetica;
+	font-size: 50px;
+	color: #B124A4;
+	text-align: left;
+}
+.byLine {
+	font-family: helvetica;
+	font-size: 30px;
+	color: #B124A4;
+	text-align: left;
+}
+.tdSnail {
+	border: 0px solid pink;
+	text-align: center;
+	height: auto;
+	text-align: left;
+}
+.classSnail {
+	border: 0px solid goldenrod;
+	width: 50%;
+	opacity: .7;
+}
+#redSnail, #blueSnail {
+	text-align: right;
+}
+#greenSnail, #purpleSnail {
+	text-align: left;
+}
+button {
+    background-color: #4DD082; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    font-family: helvetica;
+}
+#stopButton {
+	background-color: #FF4D4D;
+}
+#donate {
+	background-color: #FF9C4D;
+	font-size: 16px;
+}
+.turnHighlighter {
+	background-color: #4DBDF2; /* Green */
+    border: none;
+    color: #FDFB4D;
+    padding-right: 5px;
+    padding-left: 5px;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    font-family: helvetica;
+}
+.turnHighlighterOff {
+	font-family: helvetica;
+	font-size: 30px;
+	color: #B124A4;
+	background-color: white;
+}
+#start {
+	background-color: green;
+}
+
+#donate {
+	text-align: left;
+}

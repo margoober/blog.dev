@@ -32,7 +32,7 @@ class HomeController extends BaseController {
 
 	public function rolldice($guess)
 	{
-	$randnumb= rand(1, 6);
+	$randnumb = rand(1, 6);
 	$data = [
 		'randnumb' => $randnumb,
 		'guess' => $guess
@@ -44,5 +44,13 @@ class HomeController extends BaseController {
 	{
 		$guess = rand(1, 6);
 		return Redirect::action('HomeController@rolldice', $guess);
+	}
+
+	public function showTheDorn(){
+		return View::make('horndorn');
+	}
+
+	public function showSimpleSnailman() {
+		return View::make('simplesnailman');
 	}
 }
