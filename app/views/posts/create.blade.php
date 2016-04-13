@@ -13,17 +13,15 @@ var_dump($errors);
 			'action' => 'PostsController@store',
 			'method' => 'POST'
 			]) }}
-
-		<label>Title</label>
-		<br>
-		<input type="text" name="title" value="{{{ Input::old('title') }}}"><br>
+		{{ Form::label('title', 'Title') }}
+		{{ Form::text('title', null, ['class' => 'form-control']) }}
 		{{ $errors->first('title', '<span class="alert">:message<br></span>') }}
-		<label>Body</label>
-		<br>
-		<textarea name="body">{{{ Input::old('body') }}}</textarea>
+		{{ Form::label('body', "Body") }}
+		{{ Form::textarea('body', null, ['class' => 'form-control', 'rows' => '10']) }}
 		<br>
 		{{ $errors->first('body', '<span class="alert">:message<br></span>') }}
-		<input type="submit" value="Submit">
+		<br>
+		{{ Form::submit('Submit!', ['class' => 'btn btn-success']) }}
 	{{ Form::close() }}
 
 
