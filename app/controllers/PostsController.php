@@ -48,7 +48,12 @@ class PostsController extends BaseController {
 	}
 
 	public function destroy($id) {
-		return "destroying id $id";
+		$toDelete = Post::find($id);
+		if(!$toDelete) {
+			return Redirect::action('PostsController@index');
+		}
+		$toDelete->delete();
+		return Redirect::action('PostsController@index');
 	}
 
 }

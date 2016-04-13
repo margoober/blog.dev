@@ -27,8 +27,4 @@ var_dump($errors);
 	{{ Form::close() }}
 
 
-
-
-
-	<h3><a href="{{{ action('PostsController@index') }}}">Back to Index</a></h3>
 @stop
