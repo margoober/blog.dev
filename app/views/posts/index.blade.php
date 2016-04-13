@@ -1,12 +1,13 @@
-<html>
-<head></head>
-<body>
+@extends('layouts.master')
+@section('content')
 	<h1>All Posts</h1>
 
-	<h2>First Post</h2>
-	<p>
-		<a href="{{{ action('PostsController@show', ['post' => 2]) }}}">Read More</a>
-	</p>
+	@foreach($allPosts as $post)
+		<h2><a href="{{{ action('PostsController@update', $post->id) }}}" }}}>{{{ $post->title }}}</a></h2>
+		<p>{{{ $post->body }}}</p>
+	@endforeach
+	<br>
+	<h4>{{ $allPosts->links(); }}</h4>
 
-</body>
-</html>
+	<h3><a href="{{{ action('PostsController@create')}}}">Create a New Post!</a></h3>
+@stop
