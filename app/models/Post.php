@@ -2,7 +2,7 @@
 
 
 //Eloquent class comes preprepared with Laravel, includes insert/update kinds of methods
-class Post extends Eloquent
+class Post extends BaseModel
 {
 	protected $table = 'posts';
 

@@ -4,9 +4,8 @@ var_dump($errors);
 ?>
 @extends('layouts.master')
 @section('content')
+<section class="col-sm-6 col-sm-offset-1">
 	<h1>Create a New Post</h1>
-
-	<h2>Post Creation Form</h2>
 	{{-- 	this array we can pass a bunch of info, like css selectors
  --}}
  	{{ Form::open([
@@ -23,6 +22,8 @@ var_dump($errors);
 		<br>
 		{{ Form::submit('Submit!', ['class' => 'btn btn-success']) }}
 	{{ Form::close() }}
+	<h3><a href="{{{ action('PostsController@index')}}}"><button type="button" class="btn btn-primary">Back to Listings</button></a></h3>
+</section>
 
 
 @stop

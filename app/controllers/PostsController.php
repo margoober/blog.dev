@@ -12,48 +12,60 @@ class PostsController extends BaseController {
 	}
 
 	public function store() {
-		$validator = Validator::make(Input::all(), Post::$rules);
-		if ($validator->fails()) {
-			return Redirect::back()->withInput()->withErrors($validator);
-		} else {
-			$newPost = new Post();
-			$newPost->title = Input::get('title');
-			$newPost->body = Input::get('body');
-			$newPost->save();
-			return Redirect::action('PostsController@show', $newPost->id);
-		}
+		$post = new Post();
+		return $this->validateAndSave($post);
 	}
 
 	public function show($id) {
 		$post = Post::find($id);
+		if (!$post) {
+			App::abort(404);
+		}
 		return View::make('posts.show')->with('post', $post);
 	}
 
 	public function edit($id) {
 		$post = Post::find($id);
+		if (!$post) {
+			App::abort(404);
+		}
 		return View::make('posts.edit')->with('post', $post);
 	}
 
 	public function update($id) {
-		$validator = Validator::make(Input::all(), Post::$rules);
-		if ($validator->fails()) {
-			return Redirect::back()->withInput()->withErrors($validator);
-		} else {
-			$editedPost = Post::find($id);
-			$editedPost->title = Input::get('title');
-			$editedPost->body = Input::get('body');
-			$editedPost->save();
-			return Redirect::action('PostsController@show', $editedPost->id);
+			$post = Post::find($id);
+			if (!$post) {
+			App::abort(404);
 		}
+			return $this->validateAndSave($post);
 	}
 
 	public function destroy($id) {
 		$toDelete = Post::find($id);
 		if(!$toDelete) {
+			Session::flash('errorMessage', "Post not found.");
+			return Redirect::action('PostsController@index');
+		} else {
+			$toDelete->delete();
+			Log::info("Deleted post number {$toDelete->id} -- {$toDelete->title}");
+			Session::flash('successMessage', "Your post was successfully deleted!");
 			return Redirect::action('PostsController@index');
 		}
-		$toDelete->delete();
-		return Redirect::action('PostsController@index');
+	}
+
+	public function validateAndSave($post) {
+		$validator = Validator::make(Input::all(), Post::$rules);
+		if ($validator->fails()) {
+			Session::flash('errorMessage', "Unable to save post.");
+			return Redirect::back()->withInput()->withErrors($validator);
+		} else {
+			$post->title = Input::get('title');
+			$post->body = Input::get('body');
+			$post->save();
+			Log::info("Saved post #{$post->id} -- {$post->title}");
+			Session::flash('successMessage', "Post was saved!");
+			return Redirect::action('PostsController@show', $post->id);
+		}
 	}
 
 }
