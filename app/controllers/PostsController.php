@@ -2,9 +2,9 @@
 
 class PostsController extends BaseController {
 
-	public function __construct() {
-		$this->beforeFilter('auth');
-	}
+	// public function __construct() {
+	// 	$this->beforeFilter('auth', ['except' => ['index', 'show']]);
+	// }
 
 	public function index() {
 		$allPosts = Post::with('user')->paginate(4);
@@ -75,8 +75,13 @@ class PostsController extends BaseController {
 		}
 	}
 
-	public static function getAllLike($search) {
-		return self::where('title', 'LIKE', "%$search%")->orWhere->('body', 'LIKE', "%$search%")->orderBy('create_at', 'DESC')->get();
+	public static function getAllLike() {
+		$search = Input::get('search');
+		$posts = Post::where('title', 'LIKE', "%$search%")->orWhere('body', 'LIKE', "%$search%")->orderBy('created_at', 'DESC')->get();
+		return View::make('search-posts')->with(array(
+			'posts' => $posts,
+			'search' => $search
+			));
 	}
 
 }

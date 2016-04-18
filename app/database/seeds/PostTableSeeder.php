@@ -71,5 +71,19 @@ class PostTableSeeder extends Seeder
 		$post->img = 'testImg.jpg';
 		$post->user_id = User::first()->id;
 		$post->save();
+
+		$post = new Post();
+		$post->title = 'Lord Spookster\'s True Spook Party';
+		$post->body = 'Are you brave enough to attend this world-class spook-a-thon? We\'ll find out just how cowardly you are once Lord Spookster - a real human skeleton - falls on top of you and started wiggling. 21+ ONLY.';
+		$post->img = 'testImg.jpg';
+		$post->user_id = User::first()->id;
+		$post->save();
+
+		$post = new Post();
+		$post->title = 'Teeth Switcharoo Jamboree';
+		$post->body = 'Want to really mix things up? ONE NIGHT ONLY! - come in and have your bottom teeth surgically switched with all of your top teeth. Truly turn that frown upside-down!';
+		$post->img = 'testImg.jpg';
+		$post->user_id = User::first()->id;
+		$post->save();
 	}
 }

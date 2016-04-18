@@ -52,6 +52,9 @@ ALL THESE ARE RENDERED BY:
 Route::resource('posts', 'PostsController');
 */
 
+//search route
+Route::get('/search-posts', 'PostsController@getAllLike');
+
 //Route::resource('users', 'UsersController');
 Route::get('/login', 'UsersController@showLogin');
 Route::post('/login', 'UsersController@doLogin');

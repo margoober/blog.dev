@@ -29,16 +29,26 @@
           </ul>
         </li>
       </ul>
-      <form class="navbar-form navbar-left" role="search">
+  {{--     <form method="GET" class="navbar-form navbar-left" role="search">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search">
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
-      </form>
+      </form> --}}
+      {{ Form::open([
+      'action' => 'PostsController@getAllLike',
+      'method' => 'GET',
+      'class' => "navbar-form navbar-left",
+      'role' => 'search'
+      ]) }}
+        {{ Form::text('search', null, ['class' => 'form-control']) }}
+        {{ Form::submit('Search', ['class' => 'btn btn-default']) }}
+      {{ Form::close() }}
+
       <ul class="nav navbar-nav navbar-right">
         <li>
             <?php if (Auth::check()) { ?>
-                <a href="{{{ action('UsersController@logout') }}} ">Hi, {{{Auth::user()->username }}}!</a>
+                <a href="{{{ action('UsersController@show', 'Auth::user()->id') }}} ">Hi, {{{ Auth::user()->username }}}!</a>
           <?php } ?>
         </li>
         <li>
