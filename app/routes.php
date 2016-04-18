@@ -51,3 +51,38 @@ ALL THESE ARE RENDERED BY:
 
 Route::resource('posts', 'PostsController');
 */
+
+//Route::resource('users', 'UsersController');
+Route::get('/login', 'UsersController@showLogin');
+Route::post('/login', 'UsersController@doLogin');
+Route::get('/logout', 'UsersController@logout');
+Route::get('/users/create', 'UsersController@create');
+Route::get('/users/{user}', 'UsersController@show');
+Route::get('/users', 'UsersController@index');
+Route::post('/users', 'UsersController@store');
+
+Route::get('query-test', function() {
+	//SELECT * FROM posts WHERE title = 'Poodle Parade'
+	// $posts = Post::where('title', 'LIKE', '%Poodl%')->get();
+	// foreach ($posts as $post) {
+	// 	echo $post->title;
+
+	// $posts = Post::join('users', 'post.user_id', '=', 'users.id');
+	// //SELECT * FROM posts JOIN users on posts.user_id = users.id
+
+
+	$posts = Post::select('body')->get();
+	foreach ($posts as $post) {
+		var_dump($post->body);
+		//die();
+	}
+});
+
+Route::get('my-posts', function() {
+	$user = User::first();
+
+	foreach ($user->posts as $post) {
+		echo "Title is: $post->title" . PHP_EOL;
+		echo "Body is: $post->body" . PHP_EOL;
+	}
+});

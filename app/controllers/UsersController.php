@@ -12,26 +12,15 @@ class UsersController extends \BaseController {
 		//
 	}
 
-
-	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
 	public function create()
 	{
-		//
+		return View::make('users.create');
 	}
 
-
-	/**
-	 * Store a newly created resource in storage.
-	 *
-	 * @return Response
-	 */
 	public function store()
 	{
-		//
+		$user = new User();
+		return $this->validateAndSave($user);
 	}
 
 
@@ -80,6 +69,56 @@ class UsersController extends \BaseController {
 	public function destroy($id)
 	{
 		//
+	}
+
+
+	public function showLogin() {
+		return View::make('login');
+	}
+	public function doLogin() {
+		$validator = Validator::make(Input::all(), User::$loginRules);
+
+		if ($validator->fails()) {
+			return Redirect::back()->withInput()->withErrors($validator);
+		}
+
+		if (Auth::attempt(array('email' => Input::get('email'), 'password' => Input::get('password')))) {
+			Session::flash('successMessage', 'Welcome!');
+			return Redirect::intended('/posts');
+		} else {
+			Session::flash('errorMessage', 'Your credentials were not valid.');
+			return Redirect::back()->withInput();
+		}
+	}
+
+	public function showLogout() {
+		return View::make('logout');
+	}
+
+	public function logout() {
+		Auth::logout();
+		return Redirect::action('PostsController@index');
+	}
+
+	public function validateAndSave($user) {
+		$validator = Validator::make(Input::all(), User::$rules);
+		if ($validator->fails()) {
+			Session::flash('errorMessage', "Unable to save user info.");
+			return Redirect::back()->withInput()->withErrors($validator);
+		} else {
+			$user->first_name = Input::get('first_name');
+			$user->last_name = Input::get('last_name');
+			$user->username = Input::get('username');
+			$user->email = Input::get('email');
+			$user->password = Input::get('password');
+			$user->profile_img = 'test.jpg';
+			// future version: $user->user_id = Auth::id();
+			$user->user_id = User::first()->id;
+			$user->save();
+			Log::info("Saved user #{$user->id} -- {$user->title}");
+			Session::flash('successMessage', "user was saved!");
+			return Redirect::action('UsersController@show', $user->id);
+		}
 	}
 
 

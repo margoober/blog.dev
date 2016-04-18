@@ -1,8 +1,13 @@
 <?php
 
 class PostsController extends BaseController {
+
+	public function __construct() {
+		$this->beforeFilter('auth');
+	}
+
 	public function index() {
-		$allPosts = Post::paginate(4);
+		$allPosts = Post::with('user')->paginate(4);
 		return View::make('posts.index')->with(array('allPosts' => $allPosts));
 	}
 
@@ -61,11 +66,17 @@ class PostsController extends BaseController {
 		} else {
 			$post->title = Input::get('title');
 			$post->body = Input::get('body');
+			// future version: $post->user_id = Auth::id();
+			$post->id = User::first()->id;
 			$post->save();
 			Log::info("Saved post #{$post->id} -- {$post->title}");
 			Session::flash('successMessage', "Post was saved!");
 			return Redirect::action('PostsController@show', $post->id);
 		}
+	}
+
+	public static function getAllLike($search) {
+		return self::where('title', 'LIKE', "%$search%")->orWhere->('body', 'LIKE', "%$search%")->orderBy('create_at', 'DESC')->get();
 	}
 
 }

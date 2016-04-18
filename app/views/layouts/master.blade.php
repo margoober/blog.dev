@@ -7,6 +7,7 @@
 @yield('top-script')
 </head>
 <body>
+
 	@include('partials.navbar')
 	@if (Session::has('successMessage'))
 		<div class="alert alert-success">{{{ Session::get('successMessage') }}}</div>

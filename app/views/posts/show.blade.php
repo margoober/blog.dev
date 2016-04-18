@@ -3,7 +3,7 @@
 
 <section class="col-sm-6 col-sm-offset-1">
 	<h1>{{{ $post->title }}}</h1>
-	<p>Created at {{{ $post->created_at->format('h:i A l, F jS Y') }}}</p>
+	<p>Created at {{{ $post->created_at->format('h:i A l, F jS Y') }}} by {{{ $post->user->username }}}</p>
 
 	@if($post->created_at != $post->updated_at)
 		<p>Last updated at {{{$post->updated_at->format('h:i A l, F jS Y') }}}</p>

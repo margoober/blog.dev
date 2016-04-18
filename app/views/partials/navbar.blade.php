@@ -37,8 +37,13 @@
       </form>
       <ul class="nav navbar-nav navbar-right">
         <li>
+            <?php if (Auth::check()) { ?>
+                <a href="{{{ action('UsersController@logout') }}} ">Hi, {{{Auth::user()->username }}}!</a>
+          <?php } ?>
+        </li>
+        <li>
           <?php if (Auth::check()) { ?>
-             <a href="{{{ action('UsersController@logout') }}}">Log Out</a>
+             <a href="{{{ action('UsersController@logout') }}} ">Log Out</a>
           <?php } else { ?>
           <a href="{{{ action('UsersController@showLogin') }}}">Log In</a>
           <?php } ?>
