@@ -10,6 +10,7 @@
 	@endif
 
 	<h2>{{ $post->body }}</h2>
+	<img class="postImage" src="{{$post->img}}">
 	<h3><a href="{{{ action('PostsController@edit', $post->id)}}}"><button type="button" class="btn btn-warning">Edit!</button></a></h3>
 
 	<h3><a href="{{{ action('PostsController@index')}}}"><button type="button" class="btn btn-primary">Back to Listings</button></a></h3>

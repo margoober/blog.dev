@@ -32,7 +32,11 @@ class UsersController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+		$user = User::find($id);
+		if (!$user) {
+			App::abort(404);
+		}
+		return View::make('users.show')->with('user', $user);
 	}
 
 
@@ -44,7 +48,11 @@ class UsersController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		$user = User::find($id);
+		if (!$user) {
+			App::abort(404);
+		}
+		return View::make('users.edit')->with('user', $user);
 	}
 
 
@@ -112,11 +120,10 @@ class UsersController extends \BaseController {
 			$user->email = Input::get('email');
 			$user->password = Input::get('password');
 			$user->profile_img = 'test.jpg';
-			// future version: $user->user_id = Auth::id();
-			$user->user_id = User::first()->id;
 			$user->save();
 			Log::info("Saved user #{$user->id} -- {$user->title}");
 			Session::flash('successMessage', "user was saved!");
+
 			return Redirect::action('UsersController@show', $user->id);
 		}
 	}

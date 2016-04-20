@@ -88,3 +88,19 @@ Route::filter('csrf', function()
 		throw new Illuminate\Session\TokenMismatchException;
 	}
 });
+
+
+//this route filter says that if a user is not an admin AND did not create X post, then they cannot edit X post
+//FIGURE THIS STUFF OUT!!!!!
+Route::filter('edit', function($route) {
+	$user = Auth::user();
+	if ($user->isNotAdmin()) {
+		$postID = $route->getParameter('posts');
+		$post = Post::find($postId);
+		if (!$post->isAuthor($user)) {
+			Session::flash('errorMessage', 
+				'Sorry, you can\'t edit this post!');
+			return Redirect::action('PostsController@index');
+		}
+	}
+});

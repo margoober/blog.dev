@@ -4,6 +4,12 @@
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<style>
+	.postImage {
+		width: 400px;
+		height: auto;
+	}
+</style>
 @yield('top-script')
 </head>
 <body>

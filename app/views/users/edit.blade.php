@@ -1,16 +1,13 @@
 @extends('layouts.master')
 @section('content')
-	<h1>Edit Your Post</h1>
+	<h1>Edit Your Profile</h1>
 
-	{{ Form::model(
-		$post,
-		[ 
-			'action' => [
-				'PostsController@update',
-				$post->id
+	{{ Form::model($user, [ 
+		'action' => [
+			'UsersController@update',
+			$user->id
 			],
-			'method' =>'PUT',
-			'files' => true,
+		'method' => 'PUT'
 		]) }}
 		<div class="form-group">
 			{{ Form::label('title', 'Title') }}
@@ -24,19 +21,13 @@
 		<br>
 		{{ $errors->first('body', '<span class="alert">:message<br></span>') }}
 		<br>
-		<div class-"form-group">
-			{{ Form::label('img', 'Image') }}
-			{{ Form::file('img') }}
-			{{ $errors->first('img', '<span class="alert">:message<br></span>') }}
-		</div>
-		<br>
 		{{ Form::submit('Submit', ['class' => 'btn btn-success'])}}
 
 	{{ Form::close() }}
 
 	<br>
 	{{ Form::open([
-			'action' => ['PostsController@destroy', $post->id],
+			'action' => ['UsersController@destroy', $user->id],
 			'method' => 'DELETE'
 		]) }}
 	{{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}

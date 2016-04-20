@@ -63,6 +63,8 @@ Route::get('/users/create', 'UsersController@create');
 Route::get('/users/{user}', 'UsersController@show');
 Route::get('/users', 'UsersController@index');
 Route::post('/users', 'UsersController@store');
+Route::get('/users/{user}/edit', 'UsersController@edit');
+
 
 Route::get('query-test', function() {
 	//SELECT * FROM posts WHERE title = 'Poodle Parade'

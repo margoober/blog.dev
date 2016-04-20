@@ -10,7 +10,8 @@ var_dump($errors);
  --}}
  	{{ Form::open([
 			'action' => 'PostsController@store',
-			'method' => 'POST'
+			'method' => 'POST',
+			'files' => true
 			]) }}
 		{{ Form::label('title', 'Title') }}
 		{{ Form::text('title', null, ['class' => 'form-control']) }}
@@ -19,6 +20,12 @@ var_dump($errors);
 		{{ Form::textarea('body', null, ['class' => 'form-control', 'rows' => '10']) }}
 		<br>
 		{{ $errors->first('body', '<span class="alert">:message<br></span>') }}
+		<br>
+		<div class-"form-group">
+			{{ Form::label('img', 'Image') }}
+			{{ Form::file('img') }}
+			{{ $errors->first('img', '<span class="alert">:message<br></span>') }}
+		</div>
 		<br>
 		{{ Form::submit('Submit!', ['class' => 'btn btn-success']) }}
 	{{ Form::close() }}

@@ -5,7 +5,7 @@ class PostTableSeeder extends Seeder
 		$post = new Post();
 		$post->title = 'Plastic Peter\'s Plastic Party';
 		$post->body = 'No foil allowed! Come wiggle the night away with Plastic Peter and the Plastic Pal Gang!';
-		$post->img = 'testImg.jpg';
+		$post->img = '/img/plasticpeter.png';
 		$post->user_id = User::first()->id;
 		$post->save();
 
@@ -19,7 +19,7 @@ class PostTableSeeder extends Seeder
 		$post = new Post();
 		$post->title = 'Skeleton Bones Goodbye Party';
 		$post->body = 'My cousin has turned into a skeleton, so it is time to bid him farewell. Come by the graveyard for one spooky sendoff! Free moonlight included!';
-		$post->img = 'testImg.jpg';
+		$post->img = '/img/skeletonlavie.png';
 		$post->user_id = User::first()->id;
 		$post->save();
 
@@ -54,7 +54,7 @@ class PostTableSeeder extends Seeder
 		$post = new Post();
 		$post->title = 'Poodle Parade';
 		$post->body = 'Watch these fluffy floofsters prance and dance down the avenue! Who knows... maybe some will even be wearing top hats...';
-		$post->img = 'testImg.jpg';
+		$post->img = '/img/poodleparade.png';
 		$post->user_id = User::first()->id;
 		$post->save();
 

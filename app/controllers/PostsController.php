@@ -2,9 +2,10 @@
 
 class PostsController extends BaseController {
 
-	// public function __construct() {
-	// 	$this->beforeFilter('auth', ['except' => ['index', 'show']]);
-	// }
+	public function __construct() {
+		$this->beforeFilter('auth', ['except' => ['index', 'show']]);
+		$this->beforeFilter('edit', ['only' => ['edit', 'update']]);
+	}
 
 	public function index() {
 		$allPosts = Post::with('user')->paginate(4);
@@ -67,7 +68,15 @@ class PostsController extends BaseController {
 			$post->title = Input::get('title');
 			$post->body = Input::get('body');
 			// future version: $post->user_id = Auth::id();
-			$post->id = User::first()->id;
+			$post->user_id = User::first()->id;
+			if (Input::hasFile('img')) {
+				$img = Input::file('img');
+				$img->move(
+					public_path('/img'),
+					$img->getClientOriginalName()
+					);
+				$post->img = "/img/{$img->getClientOriginalName()}";
+			}
 			$post->save();
 			Log::info("Saved post #{$post->id} -- {$post->title}");
 			Session::flash('successMessage', "Post was saved!");

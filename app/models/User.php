@@ -9,6 +9,9 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
 	use UserTrait, RemindableTrait;
 
+	const ADMIN = 1;
+	const STANDARD = 2;
+
 	public static $rules = array(
 	    'first_name' => 'required|max:100',
 	    'last_name' => 'required|max:100',
@@ -48,5 +51,9 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
 	public function fullName() {
 		return $this->first_name . " " . $this->last_name;
+	}
+
+	public function isNotAdmin(){
+		return $this->role_id == User::STANDARD;
 	}
 }
