@@ -1,7 +1,8 @@
 @extends('layouts.master')
 @section('content')
-	<h1>Edit Your Profile</h1>
-
+<section class="col-sm-6 col-sm-offset-1">
+	
+	<h1>Hi, {{{ $user->username }}}!</h1>
 	{{ Form::model($user, [ 
 		'action' => [
 			'UsersController@update',
@@ -10,18 +11,24 @@
 		'method' => 'PUT'
 		]) }}
 		<div class="form-group">
-			{{ Form::label('title', 'Title') }}
-			{{ Form::text('title', null, ['class' => 'form-control']) }}
+			{{ Form::label('first_name', 'First name') }}
+			{{ Form::text('first_name', null, ['class' => 'form-control']) }}
+		{{ $errors->first('first_name', '<span class="alert">:message<br></span>') }}
 		</div
-		{{ $errors->first('title', '<span class="alert">:message<br></span>') }}
+		<div class="form-group">
+			{{ Form::label('last_name', 'Last name') }}
+			{{ Form::text('last_name', null, ['class' => 'form-control']) }}
+		{{ $errors->first('last_name', '<span class="alert">:message<br></span>') }}
+		</div>
 		<br>
-		{{ Form::label('body', 'Body') }}
+		<div class="form-group">
+			{{ Form::label('email', 'Email') }}
+			{{ Form::text('email', null, ['class' => 'form-control']) }}
+		{{ $errors->first('email', '<span class="alert">:message<br></span>') }}
+		</div>
 		<br>
-		{{ Form::textarea('body', null, ['class' => 'form-control', 'rows' => '10']) }}
-		<br>
-		{{ $errors->first('body', '<span class="alert">:message<br></span>') }}
-		<br>
-		{{ Form::submit('Submit', ['class' => 'btn btn-success'])}}
+		
+		{{ Form::submit('Update', ['class' => 'btn btn-success'])}}
 
 	{{ Form::close() }}
 
@@ -30,6 +37,7 @@
 			'action' => ['UsersController@destroy', $user->id],
 			'method' => 'DELETE'
 		]) }}
-	{{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}
+	{{ Form::submit('Delete Account', ['class' => 'btn btn-danger']) }}
 	{{ Form::close() }}
+</section>
 @stop

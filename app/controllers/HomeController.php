@@ -22,7 +22,7 @@ class HomeController extends BaseController {
 
 	public function showPortfolio()
 	{
-		return View::make('portfolio');
+		return View::make('portfolio.portfolio');
 	}
 
 	public function showResume()

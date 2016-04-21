@@ -8,14 +8,14 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Brand</a>
+      <a class="navbar-brand" href="{{{ action('PostsController@index') }}}">Home</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Link</a></li>
+        <li {{-- class="active" --}}><a href="{{{ action('HomeController@showResume') }}}">Resume<span class="sr-only">(current)</span></a></li>
+        <li><a href="{{{ action('HomeController@showPortfolio') }}}">Portfolio</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -48,7 +48,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li>
             <?php if (Auth::check()) { ?>
-                <a href="{{{ action('UsersController@show', 'Auth::user()->id') }}} ">Hi, {{{ Auth::user()->username }}}!</a>
+                <a href="{{{ action('UsersController@show', Auth::user()->id) }}} ">Hi, {{{ Auth::user()->username }}}!</a>
           <?php } ?>
         </li>
         <li>

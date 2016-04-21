@@ -24,17 +24,12 @@ Route::get('/sayhello/{name?}', function($name = 'pal') {
 	];
 	return View::make('my-first-view')->with($data);
 });
-
+//portfolio work
 Route::get('/resume', 'HomeController@showResume');
-
 Route::get('/portfolio', 'HomeController@showPortfolio');
-
 Route::get('/rolldice/{guess}', 'HomeController@rolldice');
-
 Route::get('/random-guess', 'HomeController@randomGuess');
-
 Route::get('/horndorn', 'HomeController@showTheDorn');
-
 Route::get('/simplesnailman', 'HomeController@showSimpleSnailman');
 
 //REST routes!:
@@ -64,6 +59,8 @@ Route::get('/users/{user}', 'UsersController@show');
 Route::get('/users', 'UsersController@index');
 Route::post('/users', 'UsersController@store');
 Route::get('/users/{user}/edit', 'UsersController@edit');
+Route::put('/users/{user}', 'UsersController@update');
+Route::delete('/users/{user}', 'UsersController@destroy');
 
 
 Route::get('query-test', function() {

@@ -26,6 +26,11 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	    	'password' => 'required',
     	);
 
+    public static $updateRules = array(
+    	'first_name' => 'required|max:100',
+	    'last_name' => 'required|max:100',
+	    'email' => 'required|max:1000',
+    	);
 	/**
 	 * The database table used by the model.
 	 *

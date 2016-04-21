@@ -62,9 +62,12 @@ class UsersController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
-	{
-		//
+	public function update($id) {
+		$user = User::find($id);
+		if (!$user) {
+			App::abort(404);
+		}
+		return $this->validateAndSave($user);
 	}
 
 
@@ -109,20 +112,39 @@ class UsersController extends \BaseController {
 	}
 
 	public function validateAndSave($user) {
-		$validator = Validator::make(Input::all(), User::$rules);
+		if ($user->id) {
+			$validator = Validator::make(Input::all(), User::$updateRules);
+		} else {
+			$validator = Validator::make(Input::all(), User::$rules);
+		}
 		if ($validator->fails()) {
 			Session::flash('errorMessage', "Unable to save user info.");
 			return Redirect::back()->withInput()->withErrors($validator);
 		} else {
-			$user->first_name = Input::get('first_name');
-			$user->last_name = Input::get('last_name');
-			$user->username = Input::get('username');
-			$user->email = Input::get('email');
-			$user->password = Input::get('password');
+			if (Input::has('first_name')) {
+				$user->first_name = Input::get('first_name');
+			}
+			if (Input::has('last_name')) {
+				$user->last_name = Input::get('last_name');
+			}
+			if (Input::has('username')) {
+				$user->username = Input::get('username');
+			}
+			if (Input::has('email')) {
+				$user->email = Input::get('email');
+			}
+			if (Input::has('password')) {
+				$user->password = Input::get('password');
+			}
 			$user->profile_img = 'test.jpg';
 			$user->save();
 			Log::info("Saved user #{$user->id} -- {$user->title}");
 			Session::flash('successMessage', "user was saved!");
+
+			//log in users that got here through users/create
+			if (Auth::attempt(array('email' => Input::get('email'), 'password' => Input::get('password')))) {
+				Session::flash('successMessage', 'Welcome!');
+			}
 
 			return Redirect::action('UsersController@show', $user->id);
 		}

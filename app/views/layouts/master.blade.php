@@ -9,6 +9,14 @@
 		width: 400px;
 		height: auto;
 	}
+	.editImage {
+		width: 150px;
+		height: auto;
+	}
+	.indexImage {
+		width: 100px;
+		height: auto;
+	}
 </style>
 @yield('top-script')
 </head>

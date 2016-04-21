@@ -39,8 +39,8 @@ class PostsController extends BaseController {
 	}
 
 	public function update($id) {
-			$post = Post::find($id);
-			if (!$post) {
+		$post = Post::find($id);
+		if (!$post) {
 			App::abort(404);
 		}
 			return $this->validateAndSave($post);
