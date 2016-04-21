@@ -31,9 +31,10 @@
 </head>
 <body>
 	<nav class="navigation">
-		<a class="navigation__logo" href="#home"><img src="#x"></a>
+		<a class="navigation__logo" href="#home"><img src="/img/sensiboiIcon.png"></a>
 		<ul class="navigation__list">
 			<li class="navigation__item"><a class="navigation__link" href="#work">See Work</a></li> &#5159;
+			<li class="navigation__item"><a class="navigation__link" href="#resume">Resume</a></li> &#5159;
 			<li class="navigation__item"><a class="navigation__link" href="mailto:amcmahon@nes.ru">Drop Me A Line</a></li>&#5159;
 		</ul>
 	</nav>
@@ -45,16 +46,11 @@
 
 			<img class="margot_welcome" src="/img/margotPortfolio.jpg">
 		</div>
-			<div class="welcome__headline" style="font-family:Karla">I'm Margot, and I'm learning to code.</div>
+			<div class="welcome__headline" style="font-family:Karla">Margot McMahon:<br>Developer, Doodler, Dingus</div>
 
 			<div class="welcome__message">
 				<p class="welcome__paragraph" style="font-family:Karla">
-				 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					Hi! I'm a web developer who doesn't have a strong preference for either front-end or back-end (yet). I am a compulsive doodler of doodles. I am interested in design theory. I spend time thinking about how web applications can be used in queer advocacy. My other interests include sociolinguistics, racquetball, and bike safety.
 				</p>	
 			</div> 
 		</div>	 							
@@ -106,18 +102,14 @@
 							</a>
 						</div>
 					</div>
-					<div class="col-1-2 mobile-col-1-1">
-						<div class="work__item">
-							<a href="codeup.dev/css_box_model.html">
-								<img src="/img/web_projects_thumbnail.png" alt="web_projects_thumbnail" class="work__image"/>
-									<div class="work__title">Web Projects</div>
-								</a>
-							</div>
-						</div>
-						<div class="col-1-2 mobile-col-1-1">
-						</div>
 					</div><!--  end work container-->
 				</section>
+		<section class="work">
+		<a name="resume">
+			<header class="section-title">Resume</header>
+			<br>
+				@include('resume')
+			<br>
 	<footer>
 		Horn Dondistries 2016
 	</footer>
