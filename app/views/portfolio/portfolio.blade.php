@@ -80,7 +80,7 @@
 					</div>
 					<div class="col-1-2 mobile-col-1-1">
 						<div class="work__item">
-							<a href="http://google.com">
+							<a href="{{{ action('HomeController@showDoodles') }}}">
 								<img src="/img/reluctant_lovers.jpg" alt="Reluctant Lovers" class="work__image"/>
 								<div class="work__title">Minimalist Doodles</div>
 							</a>
@@ -88,7 +88,7 @@
 					</div>
 					<div class="col-1-2 mobile-col-1-1">
 						<div class="work__item">
-							<a href="resume.html">
+							<a href="{{{ action('HomeController@showTheDorn')}}}">
 								<img src="/img/horndornPortfolio.png" class="work__image"/>
 								<div class="work__title">Horn Dorn JavaScript Game</div>
 							</a>
@@ -96,7 +96,7 @@
 					</div>
 					<div class="col-1-2 mobile-col-1-1">
 						<div class="work__item">
-							<a href="http://tumblr.com">
+							<a href="{{{ action('HomeController@showSimpleSnailman')}}}">
 								<img src="/img/simplesnailmanPortfolio.png" class="work__image"/>
 								<div class="work__title">Simple Snailman JavaScript Game</div>
 							</a>

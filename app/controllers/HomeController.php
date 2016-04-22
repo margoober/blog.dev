@@ -53,4 +53,9 @@ class HomeController extends BaseController {
 	public function showSimpleSnailman() {
 		return View::make('simplesnailman');
 	}
+
+	public function showDoodles()
+	{
+		return View::make('doodles');
+	}
 }

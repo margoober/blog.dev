@@ -31,6 +31,7 @@ Route::get('/rolldice/{guess}', 'HomeController@rolldice');
 Route::get('/random-guess', 'HomeController@randomGuess');
 Route::get('/horndorn', 'HomeController@showTheDorn');
 Route::get('/simplesnailman', 'HomeController@showSimpleSnailman');
+Route::get('/doodles', 'HomeController@showDoodles');
 
 //REST routes!:
 
