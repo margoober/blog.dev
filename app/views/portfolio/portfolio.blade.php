@@ -81,7 +81,7 @@
 					<div class="col-1-2 mobile-col-1-1">
 						<div class="work__item">
 							<a href="{{{ action('HomeController@showDoodles') }}}">
-								<img src="/img/reluctant_lovers.jpg" alt="Reluctant Lovers" class="work__image"/>
+								<img src="/img/reluctant_lovers.png" alt="Reluctant Lovers" class="work__image"/>
 								<div class="work__title">Minimalist Doodles</div>
 							</a>
 						</div>
