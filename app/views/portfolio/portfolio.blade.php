@@ -86,19 +86,20 @@
 							</a>
 						</div>
 					</div>
+					<div class="grid grid-pad">
 					<div class="col-1-2 mobile-col-1-1">
 						<div class="work__item">
-							<a href="{{{ action('HomeController@showTheDorn')}}}">
-								<img src="/img/horndornPortfolio.png" class="work__image"/>
-								<div class="work__title">Horn Dorn JavaScript Game</div>
+							<a href="{{{ action('HomeController@showTheDorn') }}}">
+								<img src="/img/horndornPortfolio.png" alt="Snail Hat Comics" class="work__image"/>
+								<div class="work__title">Horn Dorn Javascript Game</div>
 							</a>
 						</div>
 					</div>
 					<div class="col-1-2 mobile-col-1-1">
 						<div class="work__item">
-							<a href="{{{ action('HomeController@showSimpleSnailman')}}}">
-								<img src="/img/simplesnailmanPortfolio.png" class="work__image"/>
-								<div class="work__title">Simple Snailman JavaScript Game</div>
+							<a href="{{{ action('HomeController@showSimpleSnailman') }}}">
+								<img src="/img/simplesnailmanPortfolio.png" alt="Reluctant Lovers" class="work__image"/>
+								<div class="work__title">Simple Snailman Javascript Game</div>
 							</a>
 						</div>
 					</div>

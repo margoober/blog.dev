@@ -150,6 +150,10 @@ header {
   margin-bottom:0.75em;
 }
 
+.skills-listing {
+	font-size: 20px;
+}
+
 .work-listing .highlight, .content-text.skills-listing > ul > li > .highlight {
   font-family: "Open Sans";
   font-size:0.7em;

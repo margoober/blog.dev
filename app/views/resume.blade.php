@@ -6,7 +6,7 @@
           <div class="content-cat">
            Contact
           </div>
-          <div class="content-text">
+          <div class="content-text" style="font-size:20px">
             <ul>
               <li>Email</li>
               <li>amcmahon@nes.ru</li>
@@ -161,15 +161,13 @@
           </div>
         </div>
       </section>
-
-
       <section class="content">
         <div class="row">
           <div class="content-cat big-text">
             Awards
           </div>
           <div class="content-text work-listing education-listing">
-            <table>
+            <table style="width:500px">
               <tr>
                 <td>
                   <p>Pinto-Carver Essay Contest winner</p>
@@ -192,9 +190,6 @@
                 </td>
               </tr>
             </table>
-            
-            
-            
           </div>
         </div>
       </section>
@@ -204,34 +199,32 @@
           <div class="content-cat big-text">
             Skills
           </div>
-          <div class="content-text skills-listing">
-            <ul>
-              <li>
-                Web
-                <span>(Master)</span>
-                <p class="highlight">Node.js</p>
-                <p class="highlight">Angular.js</p>
-              </li>
-              <li>
-                Mobile
-                <span>(Advanced)</span>
-                <p class="highlight">Cocoa</p>
-              </li>
-            </ul>
-            <ul>
-              <li>
-                Languages 
-                <span>(Master)</span>
-                <p class="highlight">Javascript</p>
-              </li>
-              <li>
-                Software
-                <span>(Advanced)</span>
-                <p class="highlight">Adobe Photoshop</p>
-                <p class="highlight">Adobe InDesign</p>
-              </li>
-            </ul>
+          <div class="content-text work-listing education-listing">
+            <table style="width:500px">
+              <tr>
+                <td>
+                  <p>Web</p>
+                </td>
+                <td>
+                  <p style="text-align:right">PHP</p>
+                  <p style="text-align:right">JavaScript</p>
+                  <p style="text-align:right">jQuery</p>
+                  <p style="text-align:right">MySQL</p>
+                  <p style="text-align:right">Laravel</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>Human Languages</p>
+                </td>
+                <td>
+                  <p style="text-align:right">Working proficiency in Russian</p>
+                </td>
+              </tr>
+            </table>
           </div>
+        </div>
+      </section>
         </div>
       </section>
     </div>
