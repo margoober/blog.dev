@@ -31,11 +31,10 @@
 </head>
 <body>
 	<nav class="navigation">
-		<a class="navigation__logo" href="#home"><img src="/img/sensiboiIcon.png"></a>
+		<a class="navigation__logo" href="/"><img src="/img/naked_sensiboii.ico"></a>
 		<ul class="navigation__list">
-			<li class="navigation__item"><a class="navigation__link" href="#work">See Work</a></li> &#5159;
-			<li class="navigation__item"><a class="navigation__link" href="#resume">Resume</a></li> &#5159;
-			<li class="navigation__item"><a class="navigation__link" href="mailto:amcmahon@nes.ru">Drop Me A Line</a></li>&#5159;
+			<li class="navigation__item"><a class="navigation__link" href="/">Portfolio</a></li> &#5159;
+			<li class="navigation__item"><a class="navigation__link" href="mailto:amcmahon@nes.ru">Drop Me A Line</a></li>
 		</ul>
 	</nav>
 	<section style="height:75px; background-color:white">
@@ -115,7 +114,7 @@
 				<!--  end work container-->
 				</section>
 	<footer>
-		Horn Dondistries 2016
+		&copy; Horn Dondistries 2016
 	</footer>
 </body>
 </html>

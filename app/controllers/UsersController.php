@@ -138,6 +138,13 @@ class UsersController extends \BaseController {
 			}
 			$user->profile_img = 'test.jpg';
 			$user->save();
+
+			// //mail method
+			// Mail::send('users.mail', array('username'=>Input::get('username')), function($message){
+			// 	$message->to(Input::get('email'), Input::get('first_name').' '.Input::get('last_name'))->subject('Welcome to my Web Site!');
+			// });
+			// //end mail method
+
 			Log::info("Saved user #{$user->id} -- {$user->title}");
 			Session::flash('successMessage', "user was saved!");
 

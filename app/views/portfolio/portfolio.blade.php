@@ -35,7 +35,7 @@
 		<ul class="navigation__list">
 			<li class="navigation__item"><a class="navigation__link" href="#work">See Work</a></li> &#5159;
 			<li class="navigation__item"><a class="navigation__link" href="#resume">Resume</a></li> &#5159;
-			<li class="navigation__item"><a class="navigation__link" href="mailto:amcmahon@nes.ru">Drop Me A Line</a></li>&#5159;
+			<li class="navigation__item"><a class="navigation__link" href="mailto:amcmahon@nes.ru">Drop Me A Line</a></li>
 		</ul>
 	</nav>
 	<section class="welcome" style="background:rgba(1,179,147,0.33)"><a name="home">  </a>
@@ -74,7 +74,7 @@
 						<div class="work__item">
 							<a href="http://snailhatcomics.tumblr.com">
 								<img src="/img/snail_hat_pate.png" alt="Snail Hat Comics" class="work__image"/>
-								<div class="work__title">Comics</div>
+								<div class="work__title">Comics I'm Ashamed Of</div>
 							</a>
 						</div>
 					</div>
@@ -112,7 +112,7 @@
 				@include('resume')
 			<br>
 	<footer>
-		Horn Dondistries 2016
+		&copy; Horn Dondistries 2016
 	</footer>
 </body>
 </html>

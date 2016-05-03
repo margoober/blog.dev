@@ -26,7 +26,7 @@ Route::get('/sayhello/{name?}', function($name = 'pal') {
 });
 //portfolio work
 Route::get('/resume', 'HomeController@showResume');
-Route::get('/portfolio', 'HomeController@showPortfolio');
+Route::get('/', 'HomeController@showPortfolio');
 Route::get('/rolldice/{guess}', 'HomeController@rolldice');
 Route::get('/random-guess', 'HomeController@randomGuess');
 Route::get('/horndorn', 'HomeController@showTheDorn');
