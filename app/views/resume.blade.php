@@ -157,7 +157,7 @@
           </div>
           <div class="content-text work-listing education-listing">
             <p class="heading">Comics Artist</p>
-            <p>Tried hard-but-not-too-hard to be funny</p>
+            <p>Tried to be funny</p>
           </div>
         </div>
       </section>
