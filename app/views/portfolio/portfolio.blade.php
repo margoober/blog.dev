@@ -72,9 +72,9 @@
 				<div class="grid grid-pad">
 					<div class="col-1-2 mobile-col-1-1">
 						<div class="work__item">
-							<a href="http://snailhatcomics.tumblr.com">
+							<a href="/">
 								<img src="/img/snail_hat_pate.png" alt="Snail Hat Comics" class="work__image"/>
-								<div class="work__title">Comics I'm Ashamed Of</div>
+								<div class="work__title">Comics</div>
 							</a>
 						</div>
 					</div>
