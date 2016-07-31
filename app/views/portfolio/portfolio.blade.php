@@ -73,7 +73,7 @@
 					<div class="col-1-2 mobile-col-1-1">
 						<div class="work__item">
 							<a href="wattbott.xyz">
-								<img src="/img/wattbott.png" alt="Wattbott Energy Savings Calculator" class="work__image"/>
+								<img src="/img/wattbott.gif" alt="Wattbott Energy Savings Calculator" class="work__image"/>
 								<div class="work__title">Codeup Capstone Project</div>
 							</a>
 						</div>
