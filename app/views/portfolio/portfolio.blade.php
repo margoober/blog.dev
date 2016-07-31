@@ -50,7 +50,7 @@
 
 			<div class="welcome__message">
 				<p class="welcome__paragraph" style="font-family:Karla">
-					Hi! I'm a web developer who doesn't have a strong preference for either front-end or back-end (yet). I am a compulsive doodler of doodles. I am interested in design theory. I spend time thinking about how web applications can be used in queer advocacy. My other interests include sociolinguistics, racquetball, and bike safety.
+					Hi! I'm a web developer who doesn't have a strong preference for either front-end or back-end (yet). I am a compulsive doodler of doodles. I am interested in design theory. I spend time thinking about how web applications can be used in queer advocacy. My other interests include sociolinguistics, racquetball, and bike safety. I'm spending the summer working at <a href="http://stormking.org/">Storm King Art Center</a> in the Hudson Valley! My last summer job :'(
 				</p>	
 			</div> 
 		</div>	 							
