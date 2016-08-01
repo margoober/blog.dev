@@ -64,7 +64,7 @@
 					</div>
 					<div class="col-1-2 mobile-col-1-1">
 						<div class="work__item">
-							<a href="{{{ action('HomeController@showTheDorn')}}}">
+							<a href="https://www.etsy.com/listing/469504467/high-five-harold" target="_blank">
 								<img src="/img/high_five.png" class="work__image"/>
 								<div class="work__title">High Five Harold</div>
 							</a>
@@ -72,7 +72,7 @@
 					</div>
 					<div class="col-1-2 mobile-col-1-1">
 						<div class="work__item">
-							<a href="#">
+							<a href="https://www.etsy.com/listing/456016764/a-lovers-reassurance" target="_blank">
 								<img src="/img/tallLovers.png" class="work__image"/>
 								<div class="work__title">Will it be ok / it will be ok</div>
 							</a>
@@ -80,7 +80,7 @@
 					</div>
 					<div class="col-1-2 mobile-col-1-1">
 						<div class="work__item">
-							<a href="{{{ action('HomeController@showTheDorn')}}}">
+							<a href="https://www.etsy.com/listing/456014590/horn-dorn-encouragement-pile-with" target="_blank">
 								<img src="/img/capaz.png" class="work__image"/>
 								<div class="work__title">Horn Dorn Encouragement Pile</div>
 							</a>
