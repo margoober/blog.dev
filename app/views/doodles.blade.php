@@ -88,7 +88,7 @@
 					</div>
 					<div class="col-1-2 mobile-col-1-1">
 						<div class="work__item">
-							<a href="#">
+							<a href="https://www.etsy.com/listing/469641865/one-sad-ass-bean" target="_blank">
 								<img src="/img/sadbean.png" class="work__image"/>
 								<div class="work__title">Bean Blues</div>
 							</a>
@@ -96,7 +96,7 @@
 					</div>
 					<div class="col-1-2 mobile-col-1-1">
 						<div class="work__item">
-							<a href="{{{ action('HomeController@showTheDorn')}}}">
+							<a href="https://www.etsy.com/listing/469640307/pervy-pranceman" target="_blank">
 								<img src="/img/pranceman.png" class="work__image"/>
 								<div class="work__title">Pervy Pranceman</div>
 							</a>
@@ -104,7 +104,7 @@
 					</div>
 					<div class="col-1-2 mobile-col-1-1">
 						<div class="work__item">
-							<a href="#">
+							<a href="https://www.etsy.com/listing/469637853/coo" target="_blank">
 								<img src="/img/coo.png" class="work__image"/>
 								<div class="work__title">Coo</div>
 							</a>
