@@ -56,7 +56,7 @@
 					</div>
 					<div class="col-1-2 mobile-col-1-1">
 						<div class="work__item">
-							<a href="https://www.etsy.com/listing/456013630/sensiboii">
+							<a href="https://www.etsy.com/listing/456013630/sensiboii" target="_blank">
 								<img src="/img/sensiboii.png" alt="Sensiboi" class="work__image"/>
 								<div class="work__title">Sensiboii</div>
 							</a>
