@@ -18,13 +18,13 @@
             <ul>
               <li>Address</li>
               <li>
-                127 Princess Pass
+                67 Verplanck Avenue #5
               </li>
             </ul>
             <ul>
               <li></li>
               <li>
-                San Antonio, TX 78212
+                Beacon, NY 12508
               </li>
             </ul>
             <ul>
