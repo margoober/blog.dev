@@ -119,6 +119,15 @@
 							</a>
 						</div>
 					</div>
+					<div class="col-1-2 mobile-col-1-1">
+						<div class="work__item">
+							<a href="https://www.etsy.com/listing/469637853/coo" target="_blank">
+								<img src="/img/coo.png" class="work__image"/>
+								<div class="work__title">Coo</div>
+							</a>
+						</div>
+					</div>
+
 					<!--shit test-->
 				</div>
 				<!--  end work container-->
