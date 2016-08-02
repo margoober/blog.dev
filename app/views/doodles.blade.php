@@ -113,8 +113,8 @@
 					<!--shit test-->
 					<div class="col-1-2 mobile-col-1-1">
 						<div class="work__item">
-							<a href="https://www.etsy.com/listing/469637853/coo" target="_blank">
-								<img src="/img/jillbean.png" class="work__image"/>
+							<a href="https://www.etsy.com/listing/469500771/jill-bean-encouraging-us-to-explore-our" target="_blank">
+								<img src="/img/jillbean.jpg" class="work__image"/>
 								<div class="work__title">Jill Bean</div>
 							</a>
 						</div>
