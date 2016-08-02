@@ -114,8 +114,8 @@
 					<div class="col-1-2 mobile-col-1-1">
 						<div class="work__item">
 							<a href="https://www.etsy.com/listing/469637853/coo" target="_blank">
-								<img src="/img/coo.png" class="work__image"/>
-								<div class="work__title">Coo</div>
+								<img src="/img/jillbean.png" class="work__image"/>
+								<div class="work__title">Jill Bean</div>
 							</a>
 						</div>
 					</div>
@@ -133,7 +133,7 @@
 				<!--  end work container-->
 				</section>
 	<footer>
-		&copy; Horn Dondistries 2016
+		&copy; Horn Dondustries 2016
 	</footer>
 </body>
 </html>
