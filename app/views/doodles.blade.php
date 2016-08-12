@@ -149,7 +149,7 @@
 
 			<div class="welcome__message">
 				<p class="welcome__paragraph" style="font-family:Karla">
-					As a trans woman, I have to spend a lot of time doing the impossible work of putting a finger on the elusive & irreducible ideals that approximate femaleness. I try to make doodle pals whose qualities never exceed the bare minimum necessary to make them who they are. The way people see me is often determined by their proximity to me & the duration of their gaze, so I like to create forms that make sense on a gut level, as I do, yet become more perplexing the longer you look at them. I want my doodles to show us how to be at peace with & confident in our bodiedness not despite, but ~~because of~~ bodiedness's perils.
+					As a trans woman, I have to spend a lot of time doing the impossible work of putting a finger on the elusive & irreducible ideals that approximate femaleness. I try to make doodle pals whose qualities never exceed the bare minimum necessary to make them who they are. The way people see me is often determined by their proximity to me & the duration of their gaze, so I like to create forms that make sense on a gut level, as I do, yet become more perplexing the longer you look at them. I want my doodles to show us how to be at peace with & confident in our bodiedness not despite, but ~~because of~~ bodiedness's ambiguities.
 				</p>	
 			</div> 
 		</div>	 							
