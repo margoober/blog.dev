@@ -72,7 +72,7 @@
 				<div class="grid grid-pad">
 					<div class="col-1-2 mobile-col-1-1">
 						<div class="work__item">
-							<a href="http://www.wattbott.xyz">
+							<a href="http://wattbott.xyz">
 								<img src="/img/wattbott.gif" alt="Wattbott Energy Savings Calculator" class="work__image"/>
 								<div class="work__title">Codeup Capstone Project</div>
 							</a>
