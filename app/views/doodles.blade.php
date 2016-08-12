@@ -121,7 +121,7 @@
 					</div>
 					<div class="col-1-2 mobile-col-1-1">
 						<div class="work__item">
-							<a href="https://www.etsy.com/listing/469637853/coo" target="_blank">
+							<a href="https://www.etsy.com/listing/458453596/dirty-disco" target="_blank">
 								<img src="/img/dirtydisco.png" class="work__image"/>
 								<div class="work__title">Dirty Disco</div>
 							</a>
