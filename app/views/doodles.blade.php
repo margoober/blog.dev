@@ -42,7 +42,7 @@
 	</section>
 	<section class="work">
 		<a name="work">
-			<header class="section-title">Marmar's Minimalist Doodles</header>
+			<header class="section-title">Margot's Minimalist Doodles</header>
 		</a>
 			<div class="work__container">
 				<div class="grid grid-pad">
@@ -134,9 +134,39 @@
 				</section>
 
 		<a name="work">
-			<header class="section-title">Marmar's Minimalist Doodles</header>
+			<header class="section-title">ABOUT</header>
 		</a>
-		
+
+		<!-- about blurb -->
+
+		<section class="welcome" style="background:rgba(1,179,147,0.33)"><a name="home">  </a>
+
+		<div class="welcome__container">
+			<div class="welcome__background-container">
+			<div class="welcome__image-container">
+
+			<img class="margot_welcome" src="/img/margotPortfolio.jpg">
+		</div>
+			<div class="welcome__headline" style="font-family:Karla">Margot McMahon:<br>Developer, Doodler, Dingus</div>
+
+			<div class="welcome__message">
+				<p class="welcome__paragraph" style="font-family:Karla">
+					Hi! I'm a web developer who doesn't have a strong preference for either front-end or back-end (yet). I am a compulsive doodler of doodles. I am interested in design theory. I spend time thinking about how web applications can be used in queer advocacy. My other interests include sociolinguistics, racquetball, and bike safety. I'm spending the summer working at <a href="http://stormking.org/">Storm King Art Center</a> in the Hudson Valley! My last summer job :'(
+				</p>	
+			</div> 
+		</div>	 							
+
+		<script>
+			$('a').click(function(){
+		    $('html, body').animate({
+		        scrollTop: $('[name="' + $.attr(this, 'href').substr(1) + '"]').offset().top - 70
+		    }, 500);
+		    return false;
+		});
+		</script>
+	</section>
+		<!-- end about blurb -->
+
 	<footer>
 		&copy; Horn Dorndustries 2016
 	</footer>
