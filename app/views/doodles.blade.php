@@ -144,26 +144,15 @@
 		<div class="welcome__container">
 			<div class="welcome__background-container">
 			<div class="welcome__image-container">
-
-			<img class="margot_welcome" src="/img/margotPortfolio.jpg">
 		</div>
-			<div class="welcome__headline" style="font-family:Karla">Margot McMahon:<br>Developer, Doodler, Dingus</div>
+			<div class="welcome__headline" style="font-family:Karla">Doodle Philosophy</div>
 
 			<div class="welcome__message">
 				<p class="welcome__paragraph" style="font-family:Karla">
-					Hi! I'm a web developer who doesn't have a strong preference for either front-end or back-end (yet). I am a compulsive doodler of doodles. I am interested in design theory. I spend time thinking about how web applications can be used in queer advocacy. My other interests include sociolinguistics, racquetball, and bike safety. I'm spending the summer working at <a href="http://stormking.org/">Storm King Art Center</a> in the Hudson Valley! My last summer job :'(
+					As a trans woman, I have to spend a lot of time doing the impossible work of putting a finger on the elusive & irreducible ideals that approximate femaleness. I try to make doodle pals whose qualities never exceed the bare minimum necessary to make them who they are. The way people see me often has to do with their proximity to me & the duration of their gaze, so I like to create forms that make sense on a gut level, as I do, yet become more perplexing the longer you look at them. I want my doodles to show us how to be at peace with & confident in our bodiedness.
 				</p>	
 			</div> 
 		</div>	 							
-
-		<script>
-			$('a').click(function(){
-		    $('html, body').animate({
-		        scrollTop: $('[name="' + $.attr(this, 'href').substr(1) + '"]').offset().top - 70
-		    }, 500);
-		    return false;
-		});
-		</script>
 	</section>
 		<!-- end about blurb -->
 
